@@ -14,8 +14,7 @@ import { ValidatedForm, validationError } from 'remix-validated-form';
 import { ValidatedInput } from '~/components/ValidatedInput';
 import { ValidatedTextarea } from '~/components/ValidatedTextarea';
 import { SubmitButton } from '~/components/SubmitButton';
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 export function meta() {
   return [{ title: `${siteName} - Home` }]

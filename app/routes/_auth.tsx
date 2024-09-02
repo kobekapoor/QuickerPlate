@@ -32,6 +32,7 @@ import { Role } from '@prisma/client'
 import { redirect } from 'remix-typedjson'
 import { TimeZoneContext } from '~/contexts/TimezoneContext'
 import { useBreadcrumbs } from '~/hooks/useBreadcrumbs'
+import { siteName } from '~/utils/sitename'
 
 interface NavItem {
   label: string
@@ -39,8 +40,6 @@ interface NavItem {
   children?: Array<NavItem>
   href?: string
 }
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
 
 export const loader: LoaderFunction = async ({ request }) => {
   const user = await getUser(request)
@@ -100,8 +99,6 @@ function Nav() {
   const { isOpen, onToggle } = useDisclosure()
   const { navItems } = useLoaderData<typeof loader>()
   const navigate = useNavigate()
-
-  const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
 
   return (
     <Box>

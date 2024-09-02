@@ -22,9 +22,7 @@ import { ValidatedInput } from '~/components/ValidatedInput'
 import { Role } from '@prisma/client'
 import { sendSingleEmail } from '~/utils/email.server'
 import { NewSignupEmail } from '~/emails/NewSignup'
-import { env } from 'process'
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 const schema = z
   .object({

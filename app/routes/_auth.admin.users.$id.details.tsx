@@ -13,8 +13,7 @@ import { ValidatedInput } from '~/components/ValidatedInput'
 import { ValidatedSelect } from '~/components/ValidatedSelect'
 import { SubmitButton } from '~/components/SubmitButton'
 import { getUser } from '~/utils/auth.server'
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 export function meta() {
   return [{ title: `${siteName} - User Details` }]

@@ -20,8 +20,7 @@ import { ChakraProvider, cookieStorageManagerSSR } from '@chakra-ui/react'
 import { withEmotionCache } from '@emotion/react'
 import { ServerStyleContext, ClientStyleContext } from './context'
 import { theme } from './theme'
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 export const meta: V2_MetaFunction = () => [{ title: siteName }]
 

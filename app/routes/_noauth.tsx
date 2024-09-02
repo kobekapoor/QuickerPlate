@@ -7,9 +7,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react'
 import { Outlet } from '@remix-run/react'
-import { env } from 'process'
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 export default function NoAuth() {
   return (

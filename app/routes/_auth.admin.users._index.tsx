@@ -27,8 +27,7 @@ import { Role } from '@prisma/client'
 import { useState } from 'react'
 import { BsEraserFill } from 'react-icons/bs'
 import { env } from 'process'
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 export function meta() {
   return [{ title: `${siteName} - Users` }]

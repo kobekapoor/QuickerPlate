@@ -1,7 +1,6 @@
 import { json } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 export function meta() {
   return [{ title: `${siteName} - Admin` }]

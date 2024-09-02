@@ -7,9 +7,7 @@ import { Form, useLoaderData } from '@remix-run/react'
 import cuid from 'cuid'
 import { getUser } from '~/utils/auth.server'
 import { prisma } from '~/utils/prisma.server'
-import { env } from 'process'
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 export function meta() {
   return [{ title: `${siteName} - DB` }]

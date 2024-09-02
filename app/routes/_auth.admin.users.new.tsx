@@ -17,9 +17,7 @@ import bcrypt from 'bcryptjs'
 import { sendSingleEmail } from '~/utils/email.server'
 import { NewUserEmail } from '~/emails/NewUser'
 import { createId } from '@paralleldrive/cuid2'
-import { env } from 'process'
-
-const siteName = process.env.SITE_NAME ? process.env.SITE_NAME.toString() : 'Blank';
+import { siteName } from '~/utils/sitename'
 
 export function meta() {
   return [{ title: `${siteName} - New User` }]
